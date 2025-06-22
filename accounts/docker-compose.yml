@@ -1,0 +1,45 @@
+# All the mcs can be built, started/stoped and configured using this single file.
+# Although it is generic & controls all mcs, adding this file in accounts just to push it.
+# To start all existing containers - docker compose start
+# To stop all existing containers - docker compose stop
+# To create & start all containers - docker compose up -d
+# To stop & remove all existing containers - docker compose stop
+services:
+  accounts:
+    image: "mutharasuc/accounts"
+    container_name: accounts-ms
+    ports:
+      - "8080:8080"
+    deploy:
+      resources:
+        limits:
+          memory: 700m
+    networks:
+      - finnovate
+  loans:
+    image: "mutharasuc/loans"
+    container_name: loans-ms
+    ports:
+      - "8090:8090"
+    deploy:
+      resources:
+        limits:
+          memory: 700m
+    networks:
+      - finnovate
+  cards:
+    image: "mutharasuc/cards"
+    container_name: cards-ms
+    ports:
+      - "9001:9001"
+    deploy:
+      resources:
+        limits:
+          memory: 700m
+    networks:
+      - finnovate
+
+# Creates a network by the mcs can communicate with each other.
+networks:
+  finnovate:
+    driver: "bridge"
