@@ -1,4 +1,4 @@
-package com.finnovate.cards.DTO;
+package com.finnovate.loans.DTO;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -9,5 +9,5 @@ public class ResponseDto {
     private String statusCode;
 
     private String statusMsg;
-    
+
 }

@@ -1,4 +1,4 @@
-package com.finnovate.cards.Model;
+package com.finnovate.loans.Model;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.EntityListeners;
@@ -15,10 +15,10 @@ import org.springframework.data.jpa.domain.support.AuditingEntityListener;
 import java.time.LocalDateTime;
 
 @MappedSuperclass
+@EntityListeners(AuditingEntityListener.class)
 @Getter
 @Setter
 @ToString
-@EntityListeners(AuditingEntityListener.class)
 public class BaseEntity {
 
     @CreatedDate
