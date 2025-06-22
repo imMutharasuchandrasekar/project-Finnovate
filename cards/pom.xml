@@ -106,7 +106,7 @@
 				<version>3.4.2</version>
 				<configuration>
 					<to>
-						<image>mutharasuc/${project.artifactId}:01</image>
+						<image>mutharasuc/${project.artifactId}</image>
 					</to>
 				</configuration>
 			</plugin>
