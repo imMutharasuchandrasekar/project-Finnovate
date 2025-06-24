@@ -20,3 +20,11 @@ spring:
     hibernate:
       ddl-auto: update
     show-sql: true
+
+
+# exposes the endpoints supported by springBoot actuator
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"

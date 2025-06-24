@@ -21,3 +21,10 @@ spring:
       ddl-auto: update
     show-sql: true
 
+# enables actuator to expose all its endpoints
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+
